@@ -1,0 +1,70 @@
+void setup() {
+  size(800, 600);
+  
+  
+}
+
+void draw() {     // void draw{  = the background
+  background(22, 122, 219);
+  fill(26, 242, 12);
+  rect(0,400, width, 500);
+  ellipseMode(CENTER);
+  fill(255);
+  ellipse(600, 100, 150, 50);
+  ellipse(100, 100, 150, 50);
+  fill(250, 255, 0);
+  ellipse(800, 0, 150, 150);
+  stroke(0,255, 0);
+  line(600,400,605,380);
+  line(600,400,595,380);
+  line(300,400,295,380);
+  line(300,400,305,380);
+  line(400,50,420,75);
+  line(420,75, 440,50);
+  fill(0);
+  ellipse(420, 75, 8,8);
+  
+  
+  
+  
+  //ellipse(200,200,90,50);
+  //ellipse(200,175,90,50);
+  //ellipse(150,200,90,50);
+ // ellipse(250,200,90,50);
+  drawcloud(200, 200);
+  drawcloud(200, 175);
+  drawcloud(150, 200);
+  drawcloud(250, 200);
+
+  drawanimal(100, 360);
+ drawanimal(175, 360);
+ drawanimal(500, 360);
+}
+
+//Under the drawanimal tab
+
+void drawanimal(int x, int y) { // void drawanimal { means everything in the curly brackets is a part of the animal
+  
+  fill(249, 3, 250);
+  ellipseMode(CENTER);
+  ellipse(x, y, 50, 50);  // all other parts of the animal are draw from the x and y position
+  ellipse(x+26, y-18, 25, 25); // the x and y position being the body of the pig
+  strokeWeight(3);
+  line(x-25, y, x-35,y-5); // lines are ment to be the legs
+ line(x-15, y+20, x-25, y+35);
+ line(x+15, y+20, x +25, y+35);
+ 
+
+} 
+
+//under the drawcloud tab
+
+void drawcloud(int x, int y) { //x and y variables
+  fill(255); // fill in white
+  ellipseMode(CENTER); // x and y is at the centre of circle
+  ellipse(x,y,90,50);
+}
+
+
+
+
