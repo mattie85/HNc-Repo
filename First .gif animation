@@ -1,0 +1,23 @@
+import gifAnimation.*;
+
+PImage[] animation;
+Gif loopingGif;
+
+
+void setup() {
+  size(800,600);
+  frameRate(100);
+  
+  println("gifAnimation " + Gif.version());
+  loopingGif = new Gif(this,"burning.gif");
+  loopingGif.loop();
+ 
+  
+}
+
+void draw() {
+  background(map(mouseX,0,800,0,255),0,0);
+  image(loopingGif, 250, height / 2 - loopingGif.height / 2);
+ 
+
+}
